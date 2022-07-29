@@ -2,7 +2,8 @@ import getAnswers from "./getAnswers.js";
 import cors from "cors";
 import express from "express";
 
-const app = express(cors());
+const app = express();
+app.use(cors());
 
 app.get("/get-answers", (req, res) => {
   const answers = getAnswers(req.query.length, req.query.letters).reduce(
