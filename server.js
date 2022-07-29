@@ -17,4 +17,4 @@ app.get("/get-answers", (req, res) => {
   res.send(`<p>${answers}</p>`);
 });
 
-app.listen(3000, console.log("App listening on port 3000"));
+app.listen(process.env.PORT || 80);
