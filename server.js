@@ -16,7 +16,7 @@ app.get("/get-answers", (req, res) => {
     },
     ""
   );
-  res.send(`<p>${answers}</p>`);
+  res.send(JSON.stringify({ answers }));
 });
 
 app.listen(process.env.PORT || 80);
